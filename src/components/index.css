@@ -1,0 +1,47 @@
+.wrapper {
+    max-width: 1040px;
+    margin: 0 auto;
+}
+
+.wrapper > .img-wrapper {
+    margin: 25px 0;
+}
+
+.wrapper > .img-wrapper > img {
+    width: 100%;
+    border-radius: 8px;
+}
+
+.wrapper > .btn-action {
+    margin-bottom: 50px;
+    padding: 15px;
+    background-color:  #AD4AFF;
+    border: none;
+}
+
+.wrapper > .btn-action:hover {
+    cursor: pointer;
+    background-color:  #AD4AFF;
+    transition: .3s;
+}
+
+.wrapper > .title {
+    text-decoration: underline;
+    margin-top: 0;
+}
+
+.wrapper > .list-result {
+    font-size: 26px;
+    list-style: none;
+}
+
+.wrapper > .list-result > .result {
+    margin: 20px 0;
+    color: #AD4AFF;
+    text-transform: capitalize;
+}
+
+.wrapper > .note {
+    font-size: 14px;
+    margin-bottom: 60px;
+}
