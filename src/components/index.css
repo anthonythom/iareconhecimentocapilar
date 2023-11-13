@@ -1,47 +1,111 @@
+section {
+  display: flex;
+  flex-direction: column;
+}
+
 .wrapper {
-    max-width: 1040px;
-    margin: 0 auto;
+  margin: 0 auto;
 }
 
-.wrapper > .img-wrapper {
-    margin: 25px 0;
+.img-wrapper {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
 }
 
-.wrapper > .img-wrapper > img {
-    width: 100%;
-    border-radius: 8px;
+img {
+  width: 300px;
+
+  border-radius: 8px;
 }
 
-.wrapper > .btn-action {
-    margin-bottom: 50px;
-    padding: 15px;
-    background-color:  #AD4AFF;
-    border: none;
+.btn-action {
+  margin-bottom: 50px;
+  padding: 15px;
+  background-color: #ad4aff;
+  border: none;
 }
 
-.wrapper > .btn-action:hover {
-    cursor: pointer;
-    background-color:  #AD4AFF;
-    transition: .3s;
+.btn-action:hover {
+  cursor: pointer;
+  background-color: #b37fde;
+  transition: 0.3s;
 }
 
 .wrapper > .title {
-    text-decoration: underline;
-    margin-top: 0;
+  text-decoration: underline;
+  margin-top: 0;
 }
 
 .wrapper > .list-result {
-    font-size: 26px;
-    list-style: none;
+  font-size: 26px;
+  list-style: none;
 }
 
 .wrapper > .list-result > .result {
-    margin: 20px 0;
-    color: #AD4AFF;
-    text-transform: capitalize;
+  margin: 20px 0;
+  color: #ad4aff;
+  text-transform: capitalize;
 }
 
 .wrapper > .note {
-    font-size: 14px;
-    margin-bottom: 60px;
+  font-size: 14px;
+  margin-bottom: 60px;
 }
+
+.reqRes {
+  display: flex;
+width: 97vw;
+height: auto;
+  align-items: center;
+  justify-content: space-evenly;
+
+ 
+}
+
+
+.box1{
+    width: 677px;
+    height: 357px;
+    align-items: center;
+   justify-content: space-evenly;
+ padding: 10px;
+    display: flex;
+    gap: 10px;
+    border-radius: 20px;
+    border: 3px solid #ad4aff;
+    background: #fff;
+    backdrop-filter: blur(10px);
+  }
+
+  .box2{
+    width: 311px;
+    height: 316px;
+    flex-shrink: 0;
+    border-radius: 20px;
+    border: 3px solid #AD4AFF;
+    background: #FFF;
+    backdrop-filter: blur(10px);
+
+  }
+
+  .imgUp {
+    width: 50px;
+  }
+ 
+  p{
+    color: #000;
+font-family: Montserrat;
+font-size: 19px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
+  }
+  .pYellow{
+color: #F2B705;
+font-family: Montserrat;
+font-size: 19px;
+font-style: normal;
+font-weight: 700;
+line-height: normal;
+  }
