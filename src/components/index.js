@@ -1,6 +1,6 @@
 import { useState } from "react";
 import * as tf from "@tensorflow/tfjs";
-import modelJson from './AfroGlow_v2.keras';
+import  './AfroGlow_v2.json';
 import { useDropzone } from 'react-dropzone'; 
 import './index.css'
 
@@ -12,11 +12,23 @@ const ImageClassification = () => {
 
     const classifyImage = async (imgTensor) => {
         setIsLoading(true);
-        const model = await tf.loadLayersModel(modelJson);
+    
+        try {
+            // Carrega o modelo a partir do JSON
+            const model = await tf.loadLayersModel(tf.io.browserHTTPRequest('./AfroGlow_v2.json'));
 
-        const predictions = await model.classify(imgTensor);
-        setPredictions(predictions);
-        setIsLoading(false);
+    
+            // Realiza a classificação na imagem tensor
+            const predictions = await model.classify(imgTensor);
+    
+            // Atualiza o estado com as previsões
+            setPredictions(predictions);
+        } catch (error) {
+            console.error("Erro ao carregar ou classificar o modelo:", error);
+        } finally {
+            // Define isLoading para false, independentemente do resultado
+            setIsLoading(false);
+        }
     };
 
     const handleImageUpload = (acceptedFiles) => {
@@ -31,7 +43,7 @@ const ImageClassification = () => {
         onDrop: handleImageUpload,
         accept: 'image/*',
         maxSize: 5000000,
-        disabled: !!image, // Desabilita a zona de upload se uma imagem já foi enviada
+        disabled: !!image, 
     });
 
     return (
